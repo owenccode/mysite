@@ -1,4 +1,3 @@
-<script>
 document.addEventListener('DOMContentLoaded', () => {
  document.querySelectorAll('.toggletest').forEach(trigger => {
   trigger.addEventListener('click', function(){ 
@@ -20,4 +19,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
  });
 });
-</script>
