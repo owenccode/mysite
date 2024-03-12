@@ -29,17 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
   handleTabClick('.start-inquire', document.querySelectorAll('.window-inquire'));
 
   document.querySelectorAll('.toggletest').forEach(trigger => {
-    trigger.addEventListener('click', function () {
-      this.x = ((this.x || 0) + 1) % 2;
-      const toggleClass = this.x ? ['full', 'half'] : ['half', 'full'];
-      document.querySelectorAll('.toggletest').forEach(target => target.classList.remove(...toggleClass));
-      document.querySelectorAll('.toggletest').forEach(target => target.classList.add(...toggleClass));
-    });
-  });
-
-  // Add additional event listeners as needed
-});
-document.querySelectorAll('.toggletest').forEach(trigger => {
   trigger.addEventListener('click', function () {
     this.x = ((this.x || 0) + 1) % 2;
     const toggleClass = this.x ? ['full', 'half'] : ['half', 'full'];
@@ -48,10 +37,14 @@ document.querySelectorAll('.toggletest').forEach(trigger => {
     this.classList.remove(...toggleClass);
     // Add the classes only to the clicked element
     this.classList.add(...toggleClass);
+    });
+  });
+
+  // Add additional event listeners as needed
+});
+
 
     // If you want to apply the same classes to other elements, you can remove the lines above
     // and uncomment the lines below:
     // document.querySelectorAll('.toggletest').forEach(target => target.classList.remove(...toggleClass));
     // document.querySelectorAll('.toggletest').forEach(target => target.classList.add(...toggleClass));
-  });
-});
