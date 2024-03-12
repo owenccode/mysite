@@ -167,6 +167,59 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+
+  document.querySelectorAll('.icon-weddings').forEach(trigger => {
+    trigger.addEventListener('click', function () {
+      document.querySelectorAll('.window-weddings').forEach(target => target.classList.add('up'));
+      document.querySelectorAll('.window-photography').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-videos').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-animation').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-inquire').forEach(target => target.classList.remove('up'));
+    });
+  });
+
+  document.querySelectorAll('.icon-video').forEach(trigger => {
+    trigger.addEventListener('click', function () {
+      document.querySelectorAll('.window-videos').forEach(target => target.classList.add('up'));
+      document.querySelectorAll('.window-weddings').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-photography').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-animation').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-inquire').forEach(target => target.classList.remove('up'));
+    });
+  });
+
+  document.querySelectorAll('.icon-photo').forEach(trigger => {
+    trigger.addEventListener('click', function () {
+      document.querySelectorAll('.window-photography').forEach(target => target.classList.add('up'));
+      document.querySelectorAll('.window-weddings').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-videos').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-animation').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-inquire').forEach(target => target.classList.remove('up'));
+    });
+  });
+
+  document.querySelectorAll('.icon-animation').forEach(trigger => {
+    trigger.addEventListener('click', function () {
+      document.querySelectorAll('.window-animation').forEach(target => target.classList.add('up'));
+      document.querySelectorAll('.window-inquire').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-weddings').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-videos').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-photography').forEach(target => target.classList.remove('up'));
+    });
+  });
+
+  document.querySelectorAll('.icon-inquire').forEach(trigger => {
+    trigger.addEventListener('click', function () {
+      document.querySelectorAll('.window-inquire').forEach(target => target.classList.add('up'));
+      document.querySelectorAll('.window-weddings').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-videos').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-photography').forEach(target => target.classList.remove('up'));
+      document.querySelectorAll('.window-animation').forEach(target => target.classList.remove('up'));
+    });
+  });
+});
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
