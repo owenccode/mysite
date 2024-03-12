@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.toggletest').forEach(trigger => {
     trigger.addEventListener('click', function () {
-      this.x = ((this.x || 0) + 1) % 2;
+      this.x = ((this.x || 1) + 1) % 2;
       const toggleClass = this.x ? ['full', 'half'] : ['half', 'full'];
       document.querySelectorAll('.toggletest').forEach(target => target.classList.remove(...toggleClass));
       document.querySelectorAll('.toggletest').forEach(target => target.classList.add(...toggleClass));
