@@ -1,31 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+  
   const addClickListener = (selector, targetClass) => {
     document.querySelectorAll(selector).forEach(trigger => {
-      trigger.addEventListener('click', function () {
+      trigger.addEventListener('click', () => {
         document.querySelectorAll('.window').forEach(target => target.classList.remove('up'));
         document.querySelectorAll(targetClass).forEach(target => target.classList.add('up'));
       });
     });
   };
 
-  addClickListener('.tab-weddingpage-unselected', '.window-weddings');
-  addClickListener('.tab-video-unselected', '.window-videos');
-  addClickListener('.tab-photo-unselected', '.window-photography');
-  addClickListener('.tab-animation-unselected', '.window-animation');
-  addClickListener('.tab-inquire-unselected', '.window-inquire');
+  ['tab-weddingpage-unselected', 'tab-video-unselected', 'tab-photo-unselected', 'tab-animation-unselected', 'tab-inquire-unselected'].forEach(tab => 
+    addClickListener(`.${tab}`, `.${tab.replace('tab', 'window')}`)
+  );
 
-  addClickListener('.window-weddings', '.window-weddings');
-  addClickListener('.window-videos', '.window-videos');
-  addClickListener('.window-photography', '.window-photography');
-  addClickListener('.window-animation', '.window-animation');
-  addClickListener('.window-inquire', '.window-inquire');
+  ['window-weddings', 'window-videos', 'window-photography', 'window-animation', 'window-inquire'].forEach(window => 
+    addClickListener(`.${window}`, `.${window}`)
+  );
 
-  addClickListener('.start-wedding', '.window-weddings');
-  addClickListener('.start-video', '.window-videos');
-  addClickListener('.start-photography', '.window-photography');
-  addClickListener('.start-animation', '.window-animation');
-  addClickListener('.start-inquire', '.window-inquire');
+  ['start-wedding', 'start-video', 'start-photography', 'start-animation', 'start-inquire'].forEach(start => 
+    addClickListener(`.${start}`, `.${start.replace('start', 'window')}`)
+  );
 
   document.querySelectorAll('.toggletest').forEach(trigger => {
     trigger.addEventListener('click', function () {
